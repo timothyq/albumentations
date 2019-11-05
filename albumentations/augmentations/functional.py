@@ -138,7 +138,7 @@ def normalize(img, mean, std, max_pixel_value=255.0):
     denominator = np.reciprocal(std, dtype=np.float32)
 
     img = img.astype(np.float32)
-    img -= mean
+    img = img - mean
     img *= denominator
     return img
 
